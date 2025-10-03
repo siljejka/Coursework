@@ -1,0 +1,765 @@
+Project inputs\examplefigure.txt
+
+Project schedule for inputs\examplefigure.txt
+
+Time: 0            Starting: 1 (1)
+                   Starting: 2 (2)
+                   Current staff: 6
+
+Time: 3            Finished: 1
+                   Current staff: 2
+
+Time: 5            Finished: 2
+                   Starting: 3 (3)
+                   Starting: 4 (4)
+                   Current staff: 6
+
+Time: 6            Finished: 3
+                   Starting: 5 (5)
+                   Current staff: 7
+
+Time: 7            Finished: 4
+                   Starting: 6 (6)
+                   Current staff: 7
+
+Time: 10           Finished: 5
+                   Current staff: 4
+
+Time: 15           Finished: 6
+                   Starting: 7 (7)
+                   Starting: 8 (8)
+                   Current staff: 5
+
+Time: 16           Finished: 8
+                   Current staff: 2
+
+Time: 18           Finished: 7
+
+**** Shortest possible project execution is 18 ****
+
+Project tasks for inputs\examplefigure.txt
+
+Task 1 (1)
+-----------------------------------
+Time to complete:  3
+Staff needed:      4
+Earliest start:    0
+Slack:             3
+Dependent tasks:   3
+
+Task 2 (2)
+-----------------------------------
+Time to complete:  5
+Staff needed:      2
+Earliest start:    0
+Slack:             0
+Dependent tasks:   3 4
+
+Task 3 (3)
+-----------------------------------
+Time to complete:  1
+Staff needed:      2
+Earliest start:    5
+Slack:             1
+Dependent tasks:   5 6
+
+Task 4 (4)
+-----------------------------------
+Time to complete:  2
+Staff needed:      4
+Earliest start:    5
+Slack:             0
+Dependent tasks:   6
+
+Task 5 (5)
+-----------------------------------
+Time to complete:  4
+Staff needed:      3
+Earliest start:    6
+Slack:             5
+Dependent tasks:   7
+
+Task 6 (6)
+-----------------------------------
+Time to complete:  8
+Staff needed:      4
+Earliest start:    7
+Slack:             0
+Dependent tasks:   7 8
+
+Task 7 (7)
+-----------------------------------
+Time to complete:  3
+Staff needed:      2
+Earliest start:    15
+Slack:             0
+
+Task 8 (8)
+-----------------------------------
+Time to complete:  1
+Staff needed:      3
+Earliest start:    15
+Slack:             2
+
+
+
+
+
+Project inputs\buildhouse1.txt
+
+Project schedule for inputs\buildhouse1.txt
+
+Time: 0            Starting: 5 (Build-foundation)
+                   Current staff: 2
+
+Time: 4            Starting: 1 (Build-walls)
+                   Finished: 5
+                   Starting: 6 (Make-floor)
+                   Current staff: 4
+
+Time: 6            Finished: 6
+                   Current staff: 2
+
+Time: 8            Finished: 1
+                   Starting: 2 (Build-roofs)
+                   Current staff: 4
+
+Time: 14           Finished: 2
+                   Starting: 3 (Put-on-wallpapers)
+                   Starting: 4 (Put-on-tiles)
+                   Starting: 7 (Put-carpet-floor)
+                   Current staff: 7
+
+Time: 15           Finished: 3
+                   Finished: 4
+                   Current staff: 2
+
+Time: 18           Finished: 7
+                   Starting: 8 (Move-in)
+                   Current staff: 4
+
+Time: 22           Finished: 8
+
+**** Shortest possible project execution is 22 ****
+
+Project tasks for inputs\buildhouse1.txt
+
+Task 1 (Build-walls)
+-----------------------------------
+Time to complete:  4
+Staff needed:      2
+Earliest start:    4
+Slack:             0
+Dependent tasks:   2 3
+
+Task 2 (Build-roofs)
+-----------------------------------
+Time to complete:  6
+Staff needed:      4
+Earliest start:    8
+Slack:             0
+Dependent tasks:   3 4 7
+
+Task 3 (Put-on-wallpapers)
+-----------------------------------
+Time to complete:  1
+Staff needed:      2
+Earliest start:    14
+Slack:             3
+Dependent tasks:   8
+
+Task 4 (Put-on-tiles)
+-----------------------------------
+Time to complete:  1
+Staff needed:      3
+Earliest start:    14
+Slack:             7
+
+Task 5 (Build-foundation)
+-----------------------------------
+Time to complete:  4
+Staff needed:      2
+Earliest start:    0
+Slack:             0
+Dependent tasks:   1 6
+
+Task 6 (Make-floor)
+-----------------------------------
+Time to complete:  2
+Staff needed:      2
+Earliest start:    4
+Slack:             8
+Dependent tasks:   7
+
+Task 7 (Put-carpet-floor)
+-----------------------------------
+Time to complete:  4
+Staff needed:      2
+Earliest start:    14
+Slack:             0
+Dependent tasks:   8
+
+Task 8 (Move-in)
+-----------------------------------
+Time to complete:  4
+Staff needed:      4
+Earliest start:    18
+Slack:             0
+
+
+
+
+Project inputs\buildhouse2.txt
+
+The project isn't realizable because of cyclic dependencies.
+These cyclic dependencies are:
+1 -> 2 -> 7 -> 6 -> 1
+
+
+
+
+
+Project inputs\buildgarage.txt
+
+Project schedule for inputs\buildgarage.txt
+
+Time: 0            Starting: 1 (get-paperwork)
+                   Current staff: 1
+
+Time: 14280        Finished: 1
+                   Starting: 2 (call-contractor)
+                   Starting: 3 (clean-yard)
+                   Current staff: 4
+
+Time: 14284        Finished: 2
+                   Current staff: 3
+
+Time: 230182       Finished: 3
+                   Starting: 4 (build-foundation)
+                   Current staff: 2
+
+Time: 262316       Finished: 4
+                   Starting: 5 (build-wall-support)
+                   Starting: 6 (lay-electrical-cables)
+                   Starting: 7 (call-electrician)
+                   Current staff: 6
+
+Time: 262331       Finished: 7
+                   Current staff: 5
+
+Time: 262458       Finished: 6
+                   Current staff: 4
+
+Time: 303548       Finished: 5
+                   Starting: 9 (build-walls)
+                   Starting: 11 (build-stairs)
+                   Current staff: 6
+
+Time: 307873       Finished: 11
+                   Starting: 12 (add-2nd-floor)
+                   Current staff: 8
+
+Time: 309675       Finished: 9
+                   Starting: 10 (add-gate)
+                   Current staff: 7
+
+Time: 363997       Starting: 8 (install-electrical-gate-opener)
+                   Finished: 10
+                   Current staff: 6
+
+Time: 405242       Finished: 8
+                   Current staff: 4
+
+Time: 429351       Finished: 12
+                   Starting: 13 (isolate-room)
+                   Current staff: 3
+
+Time: 430593       Finished: 13
+                   Starting: 14 (furnish-appartment)
+                   Current staff: 2
+
+Time: 484913       Finished: 14
+
+**** Shortest possible project execution is 484913 ****
+
+Project tasks for inputs\buildgarage.txt
+
+Task 1 (get-paperwork)
+-----------------------------------
+Time to complete:  14280
+Staff needed:      1
+Earliest start:    0
+Slack:             0
+Dependent tasks:   2 3
+
+Task 2 (call-contractor)
+-----------------------------------
+Time to complete:  4
+Staff needed:      1
+Earliest start:    14280
+Slack:             215898
+Dependent tasks:   4
+
+Task 3 (clean-yard)
+-----------------------------------
+Time to complete:  215902
+Staff needed:      3
+Earliest start:    14280
+Slack:             0
+Dependent tasks:   4
+
+Task 4 (build-foundation)
+-----------------------------------
+Time to complete:  32134
+Staff needed:      2
+Earliest start:    230182
+Slack:             0
+Dependent tasks:   5 6 7
+
+Task 5 (build-wall-support)
+-----------------------------------
+Time to complete:  41232
+Staff needed:      4
+Earliest start:    262316
+Slack:             0
+Dependent tasks:   8 9 11
+
+Task 6 (lay-electrical-cables)
+-----------------------------------
+Time to complete:  142
+Staff needed:      1
+Earliest start:    262316
+Slack:             222455
+
+Task 7 (call-electrician)
+-----------------------------------
+Time to complete:  15
+Staff needed:      1
+Earliest start:    262316
+Slack:             181337
+Dependent tasks:   8
+
+Task 8 (install-electrical-gate-opener)
+-----------------------------------
+Time to complete:  41245
+Staff needed:      2
+Earliest start:    363997
+Slack:             79671
+
+Task 9 (build-walls)
+-----------------------------------
+Time to complete:  6127
+Staff needed:      4
+Earliest start:    303548
+Slack:             79671
+Dependent tasks:   10 13
+
+Task 10 (add-gate)
+-----------------------------------
+Time to complete:  54322
+Staff needed:      3
+Earliest start:    309675
+Slack:             79671
+Dependent tasks:   8
+
+Task 11 (build-stairs)
+-----------------------------------
+Time to complete:  4325
+Staff needed:      2
+Earliest start:    303548
+Slack:             0
+Dependent tasks:   12
+
+Task 12 (add-2nd-floor)
+-----------------------------------
+Time to complete:  121478
+Staff needed:      4
+Earliest start:    307873
+Slack:             0
+Dependent tasks:   13
+
+Task 13 (isolate-room)
+-----------------------------------
+Time to complete:  1242
+Staff needed:      3
+Earliest start:    429351
+Slack:             0
+Dependent tasks:   14
+
+Task 14 (furnish-appartment)
+-----------------------------------
+Time to complete:  54320
+Staff needed:      2
+Earliest start:    430593
+Slack:             0
+
+
+
+
+
+Project inputs\buildrail.txt
+
+Project schedule for inputs\buildrail.txt
+
+Time: 0            Starting: 9 (Setup-barrack)
+                   Current staff: 10
+
+Time: 3            Finished: 9
+                   Starting: 10 (Prepare-storage)
+                   Starting: 11 (Rig-ramspace-reinforcing)
+                   Starting: 12 (Build-tunnel)
+                   Starting: 14 (Build-intersection)
+                   Starting: 16 (Build-towerfoundation-1)
+                   Starting: 17 (Build-towerfoundation-2)
+                   Current staff: 56
+
+Time: 4            Finished: 11
+                   Starting: 18 (Make-armouring-tower-1)
+                   Starting: 19 (Make-armouring-tower-2)
+                   Starting: 20 (Make-armouring-arch)
+                   Current staff: 64
+
+Time: 5            Starting: 2 (Install-railing)
+                   Finished: 10
+                   Current staff: 70
+
+Time: 12           Finished: 2
+                   Current staff: 60
+
+Time: 16           Finished: 20
+                   Starting: 23 (Encase-and-armour-arch)
+                   Current staff: 61
+
+Time: 28           Finished: 14
+                   Starting: 15 (Clean-intersection)
+                   Current staff: 61
+
+Time: 29           Finished: 19
+                   Current staff: 57
+
+Time: 33           Finished: 12
+                   Starting: 13 (Clean-tunnel)
+                   Current staff: 57
+
+Time: 38           Finished: 16
+                   Current staff: 45
+
+Time: 44           Finished: 18
+                   Starting: 21 (Encase-and-armour-tower-1)
+                   Current staff: 46
+
+Time: 46           Finished: 23
+                   Starting: 26 (Cast-arch)
+                   Current staff: 48
+
+Time: 48           Finished: 15
+                   Finished: 17
+                   Starting: 22 (Encase-and-armour-tower-2)
+                   Current staff: 29
+
+Time: 51           Starting: 8 (Put-lane-tunnel-and-intersection)
+                   Finished: 13
+                   Current staff: 24
+
+Time: 59           Finished: 21
+                   Starting: 24 (Cast-tower-1)
+                   Current staff: 26
+
+Time: 63           Starting: 3 (Install-ticketmachine)
+                   Finished: 8
+                   Current staff: 29
+
+Time: 64           Finished: 3
+                   Finished: 22
+                   Starting: 25 (Cast-tower-2)
+                   Current staff: 21
+
+Time: 66           Finished: 26
+                   Current staff: 14
+
+Time: 119          Starting: 4 (Paint-tower-1-with-arch)
+                   Finished: 24
+                   Current staff: 13
+
+Time: 124          Starting: 5 (Paint-tower-2)
+                   Finished: 25
+                   Starting: 27 (Stretch-two-maincables)
+                   Current staff: 22
+
+Time: 134          Finished: 4
+                   Current staff: 16
+
+Time: 136          Finished: 5
+                   Current staff: 10
+
+Time: 149          Finished: 27
+                   Starting: 28 (Build-truss-1-with-rods)
+                   Starting: 29 (Build-truss-2-with-rods)
+                   Current staff: 20
+
+Time: 179          Finished: 28
+                   Current staff: 10
+
+Time: 186          Starting: 1 (Install-pavement)
+                   Starting: 6 (Paint-trusses)
+                   Starting: 7 (Paint-cables-and-rods)
+                   Finished: 29
+                   Starting: 30 (Cast-lane-on-truss)
+                   Current staff: 29
+
+Time: 204          Finished: 7
+                   Current staff: 23
+
+Time: 206          Finished: 1
+                   Finished: 30
+                   Starting: 31 (Polish-lane-on-arch)
+                   Current staff: 13
+
+Time: 213          Finished: 6
+                   Current staff: 7
+
+Time: 218          Finished: 31
+
+**** Shortest possible project execution is 218 ****
+
+Project tasks for inputs\buildrail.txt
+
+Task 1 (Install-pavement)
+-----------------------------------
+Time to complete:  20
+Staff needed:      10
+Earliest start:    186
+Slack:             12
+
+Task 2 (Install-railing)
+-----------------------------------
+Time to complete:  7
+Staff needed:      10
+Earliest start:    5
+Slack:             206
+
+Task 3 (Install-ticketmachine)
+-----------------------------------
+Time to complete:  1
+Staff needed:      10
+Earliest start:    63
+Slack:             154
+
+Task 4 (Paint-tower-1-with-arch)
+-----------------------------------
+Time to complete:  15
+Staff needed:      6
+Earliest start:    119
+Slack:             84
+
+Task 5 (Paint-tower-2)
+-----------------------------------
+Time to complete:  12
+Staff needed:      6
+Earliest start:    124
+Slack:             82
+
+Task 6 (Paint-trusses)
+-----------------------------------
+Time to complete:  27
+Staff needed:      6
+Earliest start:    186
+Slack:             5
+
+Task 7 (Paint-cables-and-rods)
+-----------------------------------
+Time to complete:  18
+Staff needed:      6
+Earliest start:    186
+Slack:             14
+
+Task 8 (Put-lane-tunnel-and-intersection)
+-----------------------------------
+Time to complete:  12
+Staff needed:      7
+Earliest start:    51
+Slack:             143
+Dependent tasks:   3 31
+
+Task 9 (Setup-barrack)
+-----------------------------------
+Time to complete:  3
+Staff needed:      10
+Earliest start:    0
+Slack:             0
+Dependent tasks:   10 11 12 14 16 17
+
+Task 10 (Prepare-storage)
+-----------------------------------
+Time to complete:  2
+Staff needed:      4
+Earliest start:    3
+Slack:             206
+Dependent tasks:   2
+
+Task 11 (Rig-ramspace-reinforcing)
+-----------------------------------
+Time to complete:  1
+Staff needed:      4
+Earliest start:    3
+Slack:             5
+Dependent tasks:   18 19 20
+
+Task 12 (Build-tunnel)
+-----------------------------------
+Time to complete:  30
+Staff needed:      12
+Earliest start:    3
+Slack:             143
+Dependent tasks:   13
+
+Task 13 (Clean-tunnel)
+-----------------------------------
+Time to complete:  18
+Staff needed:      12
+Earliest start:    33
+Slack:             143
+Dependent tasks:   8
+
+Task 14 (Build-intersection)
+-----------------------------------
+Time to complete:  25
+Staff needed:      12
+Earliest start:    3
+Slack:             146
+Dependent tasks:   15
+
+Task 15 (Clean-intersection)
+-----------------------------------
+Time to complete:  20
+Staff needed:      12
+Earliest start:    28
+Slack:             146
+Dependent tasks:   8
+
+Task 16 (Build-towerfoundation-1)
+-----------------------------------
+Time to complete:  35
+Staff needed:      12
+Earliest start:    3
+Slack:             11
+Dependent tasks:   21
+
+Task 17 (Build-towerfoundation-2)
+-----------------------------------
+Time to complete:  45
+Staff needed:      12
+Earliest start:    3
+Slack:             0
+Dependent tasks:   22
+
+Task 18 (Make-armouring-tower-1)
+-----------------------------------
+Time to complete:  40
+Staff needed:      4
+Earliest start:    4
+Slack:             5
+Dependent tasks:   21
+
+Task 19 (Make-armouring-tower-2)
+-----------------------------------
+Time to complete:  25
+Staff needed:      4
+Earliest start:    4
+Slack:             19
+Dependent tasks:   22
+
+Task 20 (Make-armouring-arch)
+-----------------------------------
+Time to complete:  12
+Staff needed:      4
+Earliest start:    4
+Slack:             140
+Dependent tasks:   23
+
+Task 21 (Encase-and-armour-tower-1)
+-----------------------------------
+Time to complete:  15
+Staff needed:      5
+Earliest start:    44
+Slack:             5
+Dependent tasks:   24
+
+Task 22 (Encase-and-armour-tower-2)
+-----------------------------------
+Time to complete:  16
+Staff needed:      5
+Earliest start:    48
+Slack:             0
+Dependent tasks:   25
+
+Task 23 (Encase-and-armour-arch)
+-----------------------------------
+Time to complete:  30
+Staff needed:      5
+Earliest start:    16
+Slack:             140
+Dependent tasks:   26
+
+Task 24 (Cast-tower-1)
+-----------------------------------
+Time to complete:  60
+Staff needed:      7
+Earliest start:    59
+Slack:             5
+Dependent tasks:   4 27
+
+Task 25 (Cast-tower-2)
+-----------------------------------
+Time to complete:  60
+Staff needed:      7
+Earliest start:    64
+Slack:             0
+Dependent tasks:   5 27
+
+Task 26 (Cast-arch)
+-----------------------------------
+Time to complete:  20
+Staff needed:      7
+Earliest start:    46
+Slack:             140
+Dependent tasks:   31
+
+Task 27 (Stretch-two-maincables)
+-----------------------------------
+Time to complete:  25
+Staff needed:      10
+Earliest start:    124
+Slack:             0
+Dependent tasks:   28 29
+
+Task 28 (Build-truss-1-with-rods)
+-----------------------------------
+Time to complete:  30
+Staff needed:      10
+Earliest start:    149
+Slack:             7
+Dependent tasks:   1 6 7 30
+
+Task 29 (Build-truss-2-with-rods)
+-----------------------------------
+Time to complete:  37
+Staff needed:      10
+Earliest start:    149
+Slack:             0
+Dependent tasks:   1 6 7 30
+
+Task 30 (Cast-lane-on-truss)
+-----------------------------------
+Time to complete:  20
+Staff needed:      7
+Earliest start:    186
+Slack:             0
+Dependent tasks:   31
+
+Task 31 (Polish-lane-on-arch)
+-----------------------------------
+Time to complete:  12
+Staff needed:      7
+Earliest start:    206
+Slack:             0
